@@ -4680,6 +4680,65 @@
         <member name="M:SadConsole.Entities.Hotspot.OnVisibleChanged">
             <inheritdoc />
         </member>
+        <member name="T:SadConsole.Entities.IEntity">
+            <summary>
+            For projects which use SadConsole and want to be able to write
+            unit tests for objects which use SadConsole Entities.  Currently
+            only complete enough to succeed.  Fuller solution would include
+            the full public API, and require creating IConsole, too.
+            </summary>
+        </member>
+        <member name="E:SadConsole.Entities.IEntity.Moved">
+            <summary>
+            Triggered when the entity changes position.
+            </summary>
+        </member>
+        <member name="E:SadConsole.Entities.IEntity.AnimationStateChanged">
+            <summary>
+            Automatically forwards the <see cref="E:SadConsole.AnimatedConsole.AnimationStateChanged"/> event.
+            </summary>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.Name">
+            <summary>
+            A friendly name of the game object.
+            </summary>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.Animation">
+            <summary>
+            The current animation.
+            </summary>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.Animations">
+            <summary>
+            Collection of animations associated with this game object.
+            </summary>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.Position">
+            <summary>
+            The position of the screen object.
+            </summary>
+            <remarks>From Console.  This position has no substance.</remarks>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.PositionOffset">
+            <summary>
+            Offsets the position by this amount.
+            </summary>
+        </member>
+        <member name="P:SadConsole.Entities.IEntity.Components">
+            <summary>
+            A collection of components processed by this console.
+            </summary>
+            <remarks>From Console.</remarks>
+        </member>
+        <member name="M:SadConsole.Entities.IEntity.OnCalculateRenderPosition">
+            <inheritdoc />
+        </member>
+        <member name="M:SadConsole.Entities.IEntity.Save(System.String)">
+            <summary>
+            Saves the <see cref="T:SadConsole.Entities.Entity"/> to a file.
+            </summary>
+            <param name="file">The destination file.</param>
+        </member>
         <member name="T:SadConsole.Entities.Zone">
             <summary>
             Defines an area for a scene.

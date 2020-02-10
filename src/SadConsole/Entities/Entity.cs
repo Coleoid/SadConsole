@@ -14,7 +14,7 @@ namespace SadConsole.Entities
     /// </summary>
     [System.Diagnostics.DebuggerDisplay("Entity")]
     [JsonConverter(typeof(EntityJsonConverter))]
-    public class Entity : Console
+    public class Entity : Console, IEntity
     {
         /// <summary>
         /// Automatically forwards the <see cref="AnimatedConsole.AnimationStateChanged"/> event.
